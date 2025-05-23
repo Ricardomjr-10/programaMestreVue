@@ -1,4 +1,4 @@
-const numbers = [1,2,3,4,5,6]
+const numbers = [1,2,3,4,5]
 
 let soma = 0
 
@@ -16,3 +16,12 @@ return soma += count
 
 const media = soma/numbers.length
 console.log(soma, media, nimb)
+
+const fMedia = (array) => {
+ const med = array.reduce((acc,count) => {
+    return acc += count
+ }, 0)
+ return med/array.length
+}
+
+console.log(fMedia(numbers))
