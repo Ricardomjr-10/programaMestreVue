@@ -27,9 +27,45 @@ console.log(val1, val2)
 
 //swapping variables
 
-let x = 5
-let y = 10
+let x = 5;
+let y = 10;
 
-[x, y] = [y, x]
+[x, y] = [y, x];
+console.log(x, y);
 
-console.log(x, y)
+// destructuring object 
+
+const pessoas = {
+    nome:'Ricardo',
+    idade: 40
+}
+
+const {nome, idade} = pessoas
+
+console.log(nome, idade)
+
+//renaming properties
+
+const {nome:name, idade:age} = pessoas
+console.log(name, age)
+
+//defaults values
+
+const books = {title: 'livro1'}
+
+const {title, author = 'desconhecido'} = books
+console.log(title, author)
+
+// rest property
+
+const product = {
+    id:1,
+    type:'pc',
+    price: 1000,
+    category: 'Eletronics'
+}
+
+const {id, type, ...restProducts} = product
+console.log(id)
+console.log(type)
+console.log(restProducts)
