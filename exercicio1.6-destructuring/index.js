@@ -91,3 +91,15 @@ const {
 console.log(firstname)
 console.log(street, zip)
 console.log(hob1, hob2)
+
+//commom use with function
+
+function displayUser({name, age, city = 'desconhecido'}) {
+    console.log(`${name} tem ${age} anos e mora em ${city}`)
+}
+
+const user1 = {name: 'Ricardo', age: 40, city:'Cristopolis'}
+const user2 = {name: 'James', age: 35}
+
+displayUser(user1)
+displayUser(user2)
