@@ -69,3 +69,25 @@ const {id, type, ...restProducts} = product
 console.log(id)
 console.log(type)
 console.log(restProducts)
+
+//nested object and arrays
+
+const profile = {
+    firstname: 'Jean',
+    lastName: 'charles',
+    adress: {
+        street: '5 com a principal',
+        zip: '45900000'
+    },
+    hobbies: ['assistir', 'jogar']
+}
+
+const {
+    firstname,
+    adress: {street, zip}, // destruct object
+    hobbies: [hob1, hob2]
+} = profile
+
+console.log(firstname)
+console.log(street, zip)
+console.log(hob1, hob2)
