@@ -103,3 +103,20 @@ const user2 = {name: 'James', age: 35}
 
 displayUser(user1)
 displayUser(user2)
+
+//function destructu
+
+function coordenadas () {
+    return [56, 44]
+}
+
+const [e, d] = coordenadas()
+
+console.log(e, d)
+
+function person() {
+    return { ids:1, names: 'Roberto',}
+}
+
+const {ids, names} = person()
+console.log(ids, names)
