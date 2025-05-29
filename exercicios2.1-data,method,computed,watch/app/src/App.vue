@@ -3,6 +3,7 @@
     <InstanciaVue/>
     <TesteComputed/>
     <TesteInput/>
+    <TesteWatch/>
   </div>
 </template>
 
@@ -10,6 +11,7 @@
 import InstanciaVue from './components/InstanciaVue.vue';
 import TesteComputed from './components/TesteComputed.vue';
 import TesteInput from './components/TesteInput.vue';
+import TesteWatch from './components/TesteWatch.vue';
 
 
 
@@ -19,7 +21,8 @@ export default {
   components: {
     InstanciaVue,
     TesteComputed,
-    TesteInput
+    TesteInput,
+    TesteWatch
   }
 }
 </script>
