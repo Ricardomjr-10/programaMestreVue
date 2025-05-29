@@ -1,18 +1,21 @@
 <template>
   <div>
     <InstanciaVue/>
+    <TesteComputed/>
   </div>
 </template>
 
 <script>
 import InstanciaVue from './components/InstanciaVue.vue';
+import TesteComputed from './components/TesteComputed.vue';
 
 
 
 export default {
   name: 'App',
   components: {
-    InstanciaVue
+    InstanciaVue,
+    TesteComputed
   }
 }
 </script>
