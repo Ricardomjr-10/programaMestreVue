@@ -4,6 +4,8 @@
         <p>primeiro Nome: {{ primeiroNome }}</p>
         <p>Segundo Nome: {{ segundoNome }}</p>
         <p>Nome completo: {{ nomeCompleto }}</p>
+
+        <button @click="mudarNome">Mudar Nome</button>
     </div>
 </template>
 
@@ -21,6 +23,12 @@ export default {
         nomeCompleto() {
             console.log('Calculando nome completo...')
             return `${this.primeiroNome} ${this.segundoNome}`
+        }
+    },
+
+    methods: {
+        mudarNome() {
+            this.segundoNome = 'Rocha'
         }
     }
 }
