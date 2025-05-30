@@ -4,6 +4,7 @@
     <TesteComputed/>
     <TesteInput/>
     <TesteWatch/>
+    <ClasseJavasxript/>
   </div>
 </template>
 
@@ -12,6 +13,7 @@ import InstanciaVue from './components/InstanciaVue.vue';
 import TesteComputed from './components/TesteComputed.vue';
 import TesteInput from './components/TesteInput.vue';
 import TesteWatch from './components/TesteWatch.vue';
+import ClasseJavasxript from './components/ClasseJavasxript.vue'
 
 
 
@@ -22,7 +24,8 @@ export default {
     InstanciaVue,
     TesteComputed,
     TesteInput,
-    TesteWatch
+    TesteWatch,
+    ClasseJavasxript
   }
 }
 </script>
