@@ -23,7 +23,8 @@
             <p v-if="isAdmin">Você tem acesso total.</p>
             <button v-if="showButton">Clique aqui</button>
         </div>
-
+            <p v-for="numero in numeros" :key="numero">{{ numero }}</p>
+            <p v-for="nome in nomes" :key="nome">{{ nome }}</p>
     </div>
 </template>
 
@@ -40,7 +41,13 @@ export default {
             type: 'A',
             isLoggedIn: true,
             isAdmin: true,
-            showButton: true
+            showButton: true,
+            numeros:[1,2,3,4,5],
+            nomes: {
+                1:'um',
+                2:'dois',
+                3:'tres'
+            }
         }
     },
 
