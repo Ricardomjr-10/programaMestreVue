@@ -17,6 +17,13 @@
         <div v-else>
             componente padrão (nem A nem B)
         </div>
+
+        <div>
+            <h1 v-if="isLoggedIn">Bem-vindo, usuário!</h1>
+            <p v-if="isAdmin">Você tem acesso total.</p>
+            <button v-if="showButton">Clique aqui</button>
+        </div>
+
     </div>
 </template>
 
@@ -24,19 +31,22 @@
 export default {
     data() {
         return {
-            nome:'',
-            paragrafo:{
-                color:'red',
-                fontSize:'5px'
+            nome: '',
+            paragrafo: {
+                color: 'red',
+                fontSize: '5px'
             },
-            condition:true,
-            type:'A'
+            condition: true,
+            type: 'A',
+            isLoggedIn: true,
+            isAdmin: true,
+            showButton: true
         }
     },
 
     methods: {
         aumentarFonte() {
-          this.paragrafo.fontSize ='50px'
+            this.paragrafo.fontSize = '50px'
         },
         mudarCor() {
             this.paragrafo.color = 'purple'
