@@ -5,6 +5,7 @@
     <TesteInput/>
     <TesteWatch/>
     <ClasseJavasxript/>
+    <DiretivasIf/>
   </div>
 </template>
 
@@ -14,6 +15,7 @@ import TesteComputed from './components/TesteComputed.vue';
 import TesteInput from './components/TesteInput.vue';
 import TesteWatch from './components/TesteWatch.vue';
 import ClasseJavasxript from './components/ClasseJavasxript.vue'
+import DiretivasIf from './components/DiretivasIf.vue';
 
 
 
@@ -25,7 +27,8 @@ export default {
     TesteComputed,
     TesteInput,
     TesteWatch,
-    ClasseJavasxript
+    ClasseJavasxript,
+    DiretivasIf
   }
 }
 </script>
