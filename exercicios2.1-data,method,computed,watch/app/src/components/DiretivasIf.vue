@@ -4,6 +4,19 @@
         <input type="text" v-model="nome" placeholder="Digite seu nome">
         <p v-bind:style="paragrafo" v-on:click="mudarCor">{{ nome }}</p>
         <button @click="aumentarFonte">Aumentar Fonte</button>
+
+        <div v-if="condition">
+            Este conteudo sera redenrizado apenas se 'condition' for verdadeiro.
+        </div>
+        <div v-if="type === 'A'">
+            componente A
+        </div>
+        <div v-else-if="type === 'B'">
+            componente B
+        </div>
+        <div v-else>
+            componente padrão (nem A nem B)
+        </div>
     </div>
 </template>
 
@@ -15,7 +28,9 @@ export default {
             paragrafo:{
                 color:'red',
                 fontSize:'5px'
-            }
+            },
+            condition:true,
+            type:'A'
         }
     },
 

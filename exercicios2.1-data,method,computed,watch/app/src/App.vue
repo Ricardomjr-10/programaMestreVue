@@ -1,20 +1,20 @@
 <template>
   <div>
-    <InstanciaVue/>
+    <!-- <InstanciaVue/>
     <TesteComputed/>
     <TesteInput/>
     <TesteWatch/>
-    <ClasseJavasxript/>
+    <ClasseJavasxript/> -->
     <DiretivasIf/>
   </div>
 </template>
 
 <script>
-import InstanciaVue from './components/InstanciaVue.vue';
-import TesteComputed from './components/TesteComputed.vue';
-import TesteInput from './components/TesteInput.vue';
-import TesteWatch from './components/TesteWatch.vue';
-import ClasseJavasxript from './components/ClasseJavasxript.vue'
+// import InstanciaVue from './components/InstanciaVue.vue';
+// import TesteComputed from './components/TesteComputed.vue';
+// import TesteInput from './components/TesteInput.vue';
+// import TesteWatch from './components/TesteWatch.vue';
+// import ClasseJavasxript from './components/ClasseJavasxript.vue'
 import DiretivasIf from './components/DiretivasIf.vue';
 
 
@@ -23,11 +23,11 @@ import DiretivasIf from './components/DiretivasIf.vue';
 export default {
   name: 'App',
   components: {
-    InstanciaVue,
-    TesteComputed,
-    TesteInput,
-    TesteWatch,
-    ClasseJavasxript,
+    // InstanciaVue,
+    // TesteComputed,
+    // TesteInput,
+    // TesteWatch,
+    // ClasseJavasxript,
     DiretivasIf
   }
 }
