@@ -25,6 +25,24 @@
         </div>
             <p v-for="numero in numeros" :key="numero">{{ numero }}</p>
             <p v-for="nome in nomes" :key="nome">{{ nome }}</p>
+            <div>
+                <ul>
+                    <li v-for="(fruta, index) in frutas" :key="index">{{ fruta }}</li>
+                </ul>
+                <ul>
+                    <li v-for="pessoa in pessoas" :key="pessoa.id">
+                        {{ pessoa.nome }} ({{ pessoa.idade }} anos)
+                    </li>
+                </ul>
+                <div>
+                    <h4>Lista de compras</h4>
+                    <ul>
+                        <li v-for="(item, index) in lista" :key="index">
+                            {{ index + 1 }}.{{ item }}
+                        </li>
+                    </ul>
+                </div>
+            </div>
     </div>
 </template>
 
@@ -47,7 +65,14 @@ export default {
                 1:'um',
                 2:'dois',
                 3:'tres'
-            }
+            },
+            frutas: ['maça', 'uva', 'laranja', 'goiaba'],
+            pessoas: [
+                {id:1, nome: 'joao', idade: 26},
+                {id:2, nome: 'roberto', idade: 30},
+                {id:3, nome: 'carla', idade: 18}
+            ],
+            lista: ['leite', 'pao','ovo']
         }
     },
 
