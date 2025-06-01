@@ -67,6 +67,20 @@
             <p v-if="aceitoTermos">Obrigado por aceitar!</p>
             <p v-else>Por favor, aceite os termos para continuar.</p>
         </div>
+        <div>
+            <h4>multiplos checkbox</h4>
+            <p>Quais seus esportes favoritos?</p>
+            <input type="checkbox" id="futebol" value="Futebol" v-model="esportesSelecionados">
+            <label for="futebol">Futebol</label><br>
+
+            <input type="checkbox" id="basquete" value="Basquete" v-model="esportesSelecionados">
+            <label for="basquete">Basquete</label><br>
+
+            <input type="checkbox" id="tenis" value="Tênis" v-model="esportesSelecionados">
+            <label for="tenis">Tênis</label><br>
+
+            <p>Você selecionou: {{ esportesSelecionados }}</p>
+        </div>
     </div>
 </template>
 
@@ -74,7 +88,8 @@
 export default {
     data() {
         return {
-            aceitoTermos:false,
+            esportesSelecionados: [],
+            aceitoTermos: false,
             minhaMensagem: 'Escreva aqui',
             nome: '',
             paragrafo: {
