@@ -81,6 +81,17 @@
 
             <p>Você selecionou: {{ esportesSelecionados }}</p>
         </div>
+        <div>
+            <h4>multiplos opttions</h4>
+            <label for="frutas">Selecione suas frutas favoritas:</label>
+            <select  id="frutas" v-model="frutasSelecionadas" multiple>
+                <option value="Maçã">Maçã</option>
+                <option value="Laranja">laranja</option>
+                <option value="Uva">Uva</option>
+                <option value="Tangerina">Tangerina</option>
+            </select>
+            <p>Voce selecionou: {{ frutasSelecionadas }}</p>
+        </div>
     </div>
 </template>
 
@@ -88,6 +99,7 @@
 export default {
     data() {
         return {
+            frutasSelecionadas: [],
             esportesSelecionados: [],
             aceitoTermos: false,
             minhaMensagem: 'Escreva aqui',
