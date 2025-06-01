@@ -51,6 +51,10 @@
                     </div>
                 </div>
             </div>
+            <div>
+                <h4>Teste lista numerica</h4>
+                <span v-for="n in 5" :key="n"> {{ n }} <br></span>
+            </div>
     </div>
 </template>
 
