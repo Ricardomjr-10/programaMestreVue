@@ -41,6 +41,14 @@
                             {{ index + 1 }}.{{ item }}
                         </li>
                     </ul>
+                    <div>
+                        <h4>usuario</h4>
+                        <ul>
+                            <li v-for="(value, key, index,) in usuario" :key="index">
+                                {{ index + 1 }}. {{ key }}: {{ value }}
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
     </div>
@@ -72,7 +80,13 @@ export default {
                 {id:2, nome: 'roberto', idade: 30},
                 {id:3, nome: 'carla', idade: 18}
             ],
-            lista: ['leite', 'pao','ovo']
+            lista: ['leite', 'pao','ovo'],
+
+            usuario: {
+                nome:'carlos',
+                sobrenome:'rodrigues',
+                idade:40
+            }
         }
     },
 
