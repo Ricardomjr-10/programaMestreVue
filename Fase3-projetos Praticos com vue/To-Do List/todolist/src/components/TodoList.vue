@@ -4,9 +4,11 @@
         <label for="tarefa"></label>
         <input type="text" v-model="minhaTarefa" placeholder="digite sua tarefa">
         <button @click="adicionarTarefa">Adicionar Tarefa</button>
-        <p>{{ tarefas }}</p>
         <ul>
-            <li v-for="tarefa in tarefas" :key="tarefa">{{ tarefa }}</li>
+            <li v-for="(tarefa, index ) in tarefas" :key="index">{{ tarefa }}
+                <input type="checkbox">check
+                <button @click="removerTarefa">Remover</button>
+            </li>
         </ul>
     </div>
 </template>
@@ -18,6 +20,13 @@ import { ref } from 'vue';
     const tarefas = ref([])
 
     const adicionarTarefa = () => {
-        tarefas.value.push(minhaTarefa)
+        if (minhaTarefa.value !== '') {
+        tarefas.value.push(minhaTarefa.value)
+        minhaTarefa.value = ''
+        }
+    }
+
+    const removerTarefa = (index) => {
+        tarefas.value.splice(index, 1)
     }
 </script>
