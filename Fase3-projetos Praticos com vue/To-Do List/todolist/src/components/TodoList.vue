@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="todo-list">
         <h1>Simples lista de tarefas</h1>
         <label for="tarefa"></label>
         <input type="text" @keyup.enter="adicionarTarefa" v-model="minhaTarefa" placeholder="digite sua tarefa">
@@ -30,3 +30,28 @@ import { ref } from 'vue';
         tarefas.value.splice(index, 1)
     }
 </script>
+
+<style scoped>
+    .todo-list {
+        font-family: Arial, Helvetica, sans-serif;
+        max-width: 500px;
+        margin: 50px auto;
+        padding: 20px;
+        border: 1px solid #eee;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 1);
+    }
+
+    h1 {
+        text-align: center;
+        color: #333;
+    }
+
+    input[type="text"] {
+        width: calc(100% - 90px);
+        padding: 10px;
+        margin-right: 10px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+    }
+</style>
