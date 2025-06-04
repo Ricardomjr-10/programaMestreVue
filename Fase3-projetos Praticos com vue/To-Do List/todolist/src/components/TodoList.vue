@@ -2,7 +2,7 @@
     <div>
         <h1>Simples lista de tarefas</h1>
         <label for="tarefa"></label>
-        <input type="text" v-model="minhaTarefa" placeholder="digite sua tarefa">
+        <input type="text" @keyup.enter="adicionarTarefa" v-model="minhaTarefa" placeholder="digite sua tarefa">
         <button @click="adicionarTarefa">Adicionar Tarefa</button>
         <ul>
             <li v-for="(tarefa, index ) in tarefas" :key="index">{{ tarefa }}
