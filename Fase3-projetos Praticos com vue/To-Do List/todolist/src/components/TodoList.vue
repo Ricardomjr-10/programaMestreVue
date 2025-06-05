@@ -5,8 +5,8 @@
         <input type="text" @keyup.enter="adicionarTarefa" v-model="minhaTarefa" placeholder="digite sua tarefa">
         <button @click="adicionarTarefa">Adicionar Tarefa</button>
         <ul>
-            <li v-for="(tarefa, index ) in tarefas" :key="index" :class="{'tarefa-concluida': tarefa.concluida}">
-                <input type="checkbox" v-model="tarefa.concluida"><span>{{ tarefa.texto }}</span>
+            <li v-for="(tarefa, index ) in tarefas" :key="index">
+                <input type="checkbox" v-model="tarefa.concluida"><span :class="{'tarefa-concluida': tarefa.concluida}">{{ tarefa.texto }}</span>
                 <button @click="removerTarefa">Remover</button>
             </li>
         </ul>
