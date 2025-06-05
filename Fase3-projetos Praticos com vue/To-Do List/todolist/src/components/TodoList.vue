@@ -84,4 +84,14 @@ import { ref } from 'vue';
         margin-bottom: 5px;
         border-radius: 4px;
     }
+
+    li:last-child {
+        border-bottom: none;
+    }
+
+    li button {
+        background-color: #f44336;
+        padding: 5px 10px;
+        font-size: 0.8em;
+    }
 </style>
