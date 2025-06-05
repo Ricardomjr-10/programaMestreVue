@@ -5,8 +5,8 @@
         <input type="text" @keyup.enter="adicionarTarefa" v-model="minhaTarefa" placeholder="digite sua tarefa">
         <button @click="adicionarTarefa">Adicionar Tarefa</button>
         <ul>
-            <li v-for="(tarefa, index ) in tarefas" :key="index">{{ tarefa }}
-                <input type="checkbox">check
+            <li v-for="(tarefa, index ) in tarefas" :key="index">
+                <input type="checkbox">{{ tarefa }}
                 <button @click="removerTarefa">Remover</button>
             </li>
         </ul>
@@ -77,5 +77,11 @@ import { ref } from 'vue';
     li {
         display: flex;
         justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        border-bottom: 1px solid #eee;
+        background-color: #f9f9f9;
+        margin-bottom: 5px;
+        border-radius: 4px;
     }
 </style>
