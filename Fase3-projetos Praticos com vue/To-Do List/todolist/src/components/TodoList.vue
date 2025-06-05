@@ -5,8 +5,8 @@
         <input type="text" @keyup.enter="adicionarTarefa" v-model="minhaTarefa" placeholder="digite sua tarefa">
         <button @click="adicionarTarefa">Adicionar Tarefa</button>
         <ul>
-            <li v-for="(tarefa, index ) in tarefas" :key="index">
-                <input type="checkbox">{{ tarefa }}
+            <li v-for="(tarefa, index ) in tarefas" :key="index" :class="{'tarefa-concluida': tarefa.concluida}">
+                <input type="checkbox" v-model="tarefa.concluida"><span>{{ tarefa.texto }}</span>
                 <button @click="removerTarefa">Remover</button>
             </li>
         </ul>
@@ -21,7 +21,7 @@ import { ref } from 'vue';
 
     const adicionarTarefa = () => {
         if (minhaTarefa.value !== '') {
-        tarefas.value.push(minhaTarefa.value)
+        tarefas.value.push({texto: minhaTarefa.value, concluida: false})
         minhaTarefa.value = ''
         }
     }
@@ -76,8 +76,8 @@ import { ref } from 'vue';
 
     li {
         display: flex;
-        justify-content: space-between;
-        align-items: center;
+        /* justify-content:space-between; */
+        align-items:center;
         padding: 10px;
         border-bottom: 1px solid #eee;
         background-color: #f9f9f9;
@@ -93,9 +93,25 @@ import { ref } from 'vue';
         background-color: #f44336;
         padding: 5px 10px;
         font-size: 0.8em;
+         margin-left: auto; /* Empurra o botão para a direita */
     }
 
     li button:hover {
         background-color: #da190b;
     }
+
+    .tarefa-concluida {
+  text-decoration: line-through;
+  color: #888; /* Opcional: deixar a cor do texto mais suave */
+}
+
+li input[type="checkbox"] {
+  margin-right: 10px;
+  transform: scale(1.2); /* Aumenta um pouco o checkbox */
+}
+
+span {
+    flex-grow: 1;
+}
+
 </style>
