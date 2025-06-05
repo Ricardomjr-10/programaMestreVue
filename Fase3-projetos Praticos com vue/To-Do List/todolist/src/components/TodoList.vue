@@ -48,7 +48,7 @@ import { ref } from 'vue';
     }
 
     input[type="text"] {
-        width: calc(100% - 90px);
+        width: calc(100% - 160px);
         padding: 10px;
         margin-right: 10px;
         border: 1px solid #ddd;
@@ -62,5 +62,20 @@ import { ref } from 'vue';
         border: none;
         border-radius: 4px;
         cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #45a049;
+    }
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin-top: 20px;
+    }
+
+    li {
+        display: flex;
+        justify-content: space-between;
     }
 </style>
