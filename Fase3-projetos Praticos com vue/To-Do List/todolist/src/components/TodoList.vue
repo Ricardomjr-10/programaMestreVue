@@ -54,4 +54,13 @@ import { ref } from 'vue';
         border: 1px solid #ddd;
         border-radius: 4px;
     }
+
+    button {
+        padding: 10px 15px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
 </style>
