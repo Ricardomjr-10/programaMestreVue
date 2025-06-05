@@ -94,4 +94,8 @@ import { ref } from 'vue';
         padding: 5px 10px;
         font-size: 0.8em;
     }
+
+    li button:hover {
+        background-color: #da190b;
+    }
 </style>
