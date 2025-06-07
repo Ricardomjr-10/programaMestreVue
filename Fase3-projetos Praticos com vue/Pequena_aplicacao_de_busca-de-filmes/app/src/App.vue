@@ -1,16 +1,18 @@
 <template>
   <div>
-
+    <BuscarFilmes/>
   </div>
 </template>
 
 <script>
+import BuscarFilmes from './components/BuscarFilmes.vue';
+
 
 
 export default {
   name: 'App',
   components: {
-    
+    BuscarFilmes
   }
 }
 </script>
