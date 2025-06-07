@@ -1,22 +1,21 @@
 <template>
     <div>
         <h1>Contador</h1>
-        <div>{{ numero }}</div>
-        <button @click="aumentar">Aumentar</button>
-        <button @click="diminuir">Diminnuir</button>
+        <div>{{ props.valorContador }}</div>
     </div>
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import defineProps from 'vue'
 
-const numero = ref(0)
+const props = defineProps({
+    valorContador: {
+        type: Number,
+        required: true,
+        default: 0
+    }
+})
 
-const aumentar = () => {
-    numero.value++
-}
 
-const diminuir = () => {
-    numero.value--
-}
+
 </script>

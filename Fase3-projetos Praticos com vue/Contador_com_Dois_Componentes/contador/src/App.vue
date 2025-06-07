@@ -1,18 +1,29 @@
 <template>
-  <ExibirContagem/>
+  <div>
+    <h1>Meu Contador Vue</h1>
+    <ExibirContagem :valorContador="numero"/>
+    <BotoesAcao
+    @incrementar="incrementar"
+    @decrementar="decrementar"
+    />
+  </div>
 </template>
 
-<script>
+<script setup>
+import { ref } from 'vue';
+import BotoesAcao from './components/BotoesAcao.vue';
 import ExibirContagem from './components/ExibirContagem.vue';
 
+const numero = ref(0)
 
-
-export default {
-  name: 'App',
-  components: {
-   ExibirContagem
-  }
+const incrementar = () => {
+ numero.value++
 }
+
+const decrementar = () => {
+  numero.value--
+}
+
 </script>
 
 <style>
