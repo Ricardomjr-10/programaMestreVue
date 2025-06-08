@@ -5,7 +5,7 @@
         <button @click="pesquisarFilme">Buscar</button>
         <div>
             <div>Nome do Filme: {{ user.Title }}</div>
-            <img src={{ user.Poster }} alt="poster">
+            <img :src="user.Poster" alt="poster" class="movie-poster-details ">
         </div>
     </div>
 </template>
@@ -20,7 +20,8 @@ const apiKey = ref('49e27f1e')
 
 
 const pesquisarFilme = async () => {
-    const response = await fetch(`http://www.omdbapi.com/?apikey=${apiKey.value}&t=${titleFilme.value}`)
+    const encodedTitle = encodeURIComponent(titleFilme.value.trim())
+    const response = await fetch(`http://www.omdbapi.com/?apikey=${apiKey.value}&t=${encodedTitle}`)
     
     const data = await response.json()
     
@@ -30,7 +31,15 @@ const pesquisarFilme = async () => {
 }
 
 
-
-
-
 </script>
+
+<style scoped>
+/* ... seus estilos existentes ... */
+.movie-poster-details {
+  max-width: 30%;
+  height: auto;
+  margin-top: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+</style>
